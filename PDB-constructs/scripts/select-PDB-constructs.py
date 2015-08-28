@@ -30,20 +30,13 @@ score_aln = alignlib.score_aln
 try:
     override_target = sys.argv[ sys.argv.index('-target') + 1 ]
     targets = [override_target]
-    plate_size = 1
-    ndesired_unique_targets = 1
 except ValueError:
     targets = 'All'
-    # an Excel spreadsheet containing [plate_size] constructs will be created. The following value adjusts the number of unique targets. Any remaining well positions will be used for replicates, selected from the top-ranked DB entries (according to the DB target_score).
-    plate_size = 96
-    ndesired_unique_targets = 69
 
 results_dir = os.path.join('.')
 
-output_Excel_filename = 'PDB_constructs.xlsx'
 output_selections_filename = 'PDB_constructs-data' # will be output as both .txt and .csv files
 manual_exceptions_filename = 'manual_exceptions.yaml'
-output_Excel_filepath = os.path.join(results_dir, output_Excel_filename)
 output_selections_filepath = os.path.join(results_dir, output_selections_filename)
 manual_exceptions_filepath = os.path.join(results_dir, manual_exceptions_filename)
 
@@ -614,15 +607,7 @@ if __name__ == '__main__':
     if not os.path.exists(html_alignments_dir):
         os.mkdir(html_alignments_dir)
 
-    # ===========
-    # Read project metadata file
-    # ===========
-
-    project_metadata_filepath = 'project-data.yaml'
-    with open(project_metadata_filepath, 'r') as project_metadata_file:
-        project_metadata = yaml.load(project_metadata_file)
-
-    DB_path = project_metadata.get('TargetExplorerDB_path')
+    DB_path = os.path.join('../', 'kinome-database', 'database.xml.gz')
 
     # ===========
     # Parse DB
