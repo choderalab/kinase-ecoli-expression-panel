@@ -18,5 +18,5 @@ Manifest
 * `manual_exceptions.yaml`:
     * list of user-defined exceptions to be used for construct choices - this is read in by the select-PDB-constructs.py scripts and is used to downweight PDB construct sequences with known annotation errors, and in some cases to provide corrected data
 * `alignments/`:
-    * HTML files output by the select-PDB-constructs.py scripts; for each target protein domain which has PDB entries with the desired expression\_system annotation, an HTML file displays the sequence alignment of those PDB entries against the UniProt canonical isoform sequence, and a sequence from a plasmid library; the order of the PDB sequences is sorted based on the parameters described above.
+    * HTML files output by the select-PDB-constructs.py script; for each target protein domain which has PDB entries with the desired expression\_system annotation, an HTML file displays the sequence alignment of those PDB entries against the UniProt canonical isoform sequence, and a sequence from a plasmid library; the order of the PDB sequences is sorted based on the parameters described above.
 
