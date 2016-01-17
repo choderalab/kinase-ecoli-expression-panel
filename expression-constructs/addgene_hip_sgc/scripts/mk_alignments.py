@@ -14,15 +14,9 @@ if include_selected_constructs:
 
 # get plasmid data
 
-# plasmid_filepaths = ['../../plasmids/addgene/human-kinase-ORF-collection/aln.csv', '../../plasmids/DFHCC-PlasmID/HIP-human_kinase_collection-pJP1520/aln.csv', '../../plasmids/SGC/Oxford_SGC_Clones/aln.csv']
-# plasmid_data = pd.DataFrame.from_csv(plasmid_filepaths[0])
-# for p in range(1, len(plasmid_filepaths)):
-#     df = pd.DataFrame.from_csv(plasmid_filepaths[p])
-#     plasmid_data = pd.concat([plasmid_data, df])
-
-addgene_plasmid_data = pd.DataFrame.from_csv('../../plasmids/addgene/human-kinase-ORF-collection/aln.csv')
-hip_plasmid_data = pd.DataFrame.from_csv('../../plasmids/DFHCC-PlasmID/HIP-human_kinase_collection-pJP1520/aln.csv')
-sgc_plasmid_data = pd.DataFrame.from_csv('../../plasmids/SGC/Oxford_SGC_Clones/aln.csv')
+addgene_plasmid_data = pd.DataFrame.from_csv('../../plasmids/addgene/human-kinase-ORF-collection/plasmid-data-aln.csv')
+hip_plasmid_data = pd.DataFrame.from_csv('../../plasmids/DFHCC-PlasmID/HIP-human_kinase_collection-pJP1520/plasmid-data-aln.csv')
+sgc_plasmid_data = pd.DataFrame.from_csv('../../plasmids/SGC/Oxford_SGC_Clones/plasmid-data-aln.csv')
 plasmid_data = pd.concat([addgene_plasmid_data, hip_plasmid_data, sgc_plasmid_data])
 
 plasmid_source = ['addgene'] * len(addgene_plasmid_data) + ['HIP pJP1520'] * len(hip_plasmid_data) + ['SGC Oxford'] * len(sgc_plasmid_data)

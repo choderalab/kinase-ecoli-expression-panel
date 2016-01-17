@@ -5,8 +5,8 @@ import pandas as pd
 def main():
     output_xl_filepath = 'collab-kinases.xlsx'
 
-    addgene_plasmids_df = pd.read_csv('../../plasmids/addgene/human-kinase-ORF-collection/aln.csv')
-    hip_plasmids_df = pd.read_csv('../../plasmids/DFHCC-PlasmID/HIP-human_kinase_collection-pJP1520/aln.csv')
+    addgene_plasmids_df = pd.read_csv('../../plasmids/addgene/human-kinase-ORF-collection/plasmid-data-aln.csv')
+    hip_plasmids_df = pd.read_csv('../../plasmids/DFHCC-PlasmID/HIP-human_kinase_collection-pJP1520/plasmid-data-aln.csv')
 
     wb = Workbook()
     ws = wb.get_active_sheet()

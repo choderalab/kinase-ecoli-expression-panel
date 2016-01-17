@@ -25,7 +25,7 @@ print '%d kinase constructs found' % len(df)
 # defs
 
 def find_construct_seq_start(construct_seq, include_nterm_m=False):
-    '''Searches for the start of a construct within a plasmid or PDB sequence
+    """Searches for the start of a construct within a plasmid or PDB sequence
     which has been pre-aligned against the WT sequence. The aim is to avoid
     including expression tags.
 
@@ -51,7 +51,7 @@ def find_construct_seq_start(construct_seq, include_nterm_m=False):
     include_nterm_m=True
         ---mHLICQSGDVLSARYEIV
            ^
-    '''
+    """
     window_size = 10
     lowercase_max_target = 3
     regex = re.compile('^[A-Z][A-Z]')

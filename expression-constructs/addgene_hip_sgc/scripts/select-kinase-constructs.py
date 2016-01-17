@@ -39,18 +39,18 @@ def elem_any_true(inputarrays):
 # ========
 # Read in data
 # ========
-addgene_plasmids = pd.DataFrame.from_csv('../../plasmids/addgene/human-kinase-ORF-collection/aln.csv')
+addgene_plasmids = pd.DataFrame.from_csv('../../plasmids/addgene/human-kinase-ORF-collection/plasmid-data-aln.csv')
 
 # remove addgene plasmids with 70 or more conflicts in the target domain region, or less than 50% seq identity
 selected_addgene_plasmids = addgene_plasmids[elem_all_true([addgene_plasmids['nconflicts_target_domain_region'] < 70, addgene_plasmids['pctidentity_target_domain_region'] > 50.])]
 selected_addgene_plasmids.reset_index(inplace=True) # add numerical index and move 'cloneID' to a column
 print 'Number of addgene plasmids with < 70 conflicts in the target domain region and more than 50% seq identity:', len(selected_addgene_plasmids)
 
-hip_plasmids = pd.DataFrame.from_csv('../../plasmids/DFHCC-PlasmID/HIP-human_kinase_collection-pJP1520/aln.csv')
+hip_plasmids = pd.DataFrame.from_csv('../../plasmids/DFHCC-PlasmID/HIP-human_kinase_collection-pJP1520/plasmid-data-aln.csv')
 hip_plasmids.reset_index(inplace=True) # add numerical index and move 'cloneID' to a column
 print 'Number of HIP plasmids:', len(hip_plasmids)
 
-sgc_plasmids = pd.DataFrame.from_csv('../../plasmids/SGC/Oxford_SGC_Clones/aln.csv')
+sgc_plasmids = pd.DataFrame.from_csv('../../plasmids/SGC/Oxford_SGC_Clones/plasmid-data-aln.csv')
 
 # remove sgc plasmids with 70 or more conflicts in the target domain region, or less than 50% seq identity
 selected_sgc_plasmids = sgc_plasmids[elem_all_true([sgc_plasmids['nconflicts_target_domain_region'] < 70, sgc_plasmids['pctidentity_target_domain_region'] > 50.])]
