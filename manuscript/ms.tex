@@ -77,8 +77,8 @@
   \affiliation{QB3 MacroLab, University of California, Berkeley, CA 94720}
   \email{c.jeans@berkeley.edu}
 \author{Markus Seeliger}
-%  \affiliation{Computational Biology Program, Sloan Kettering Institute, Memorial Sloan Kettering Cancer Center, New York, NY 10065}
-%  \email{lucelenie.rodriguez@choderalab.org}
+\affiliation{Department of Pharmacological Sciences, Stony Brook University Medical School, Stony Brook, NY 11794}
+\email{markus.seeliger@stonybrook.edu}
 \author{John D. Chodera}
  \thanks{Corresponding author}
  \email{john.chodera@choderalab.org}
@@ -90,7 +90,12 @@
 % ABSTRACT/pacs
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
-
+Kinases play a critical role in cellular signaling pathways.
+Human kinase dysregulation linked to a number of diseases, such as cancer, diabetes, and inflammation, and as a result, much of the effort in developing treatments (and perhaps 30\% of \emph{all} current drug development effort) has focused on shutting down aberrant kinases with targeted inhibitors.
+While insect and mammalian expression systems have demonstrated success rates for the expression of human kinases, these expression systems cannot compete with the simplicity and cost-effectiveness of bacterial expression systems, which historically had found human kinases difficult to express.
+Following the demonstration that phosphatase coexpression could give high yields of Src and Abl kinase domains in inexpensive bacterial expression systems~\cite{seeliger:2005:protein-sci:kinase-expression}, we have performed a large-scale expression screen to generate a library of human kinase domain constructs that express well in a simple automated His-tagged bacterial expression system when coexpressed with phosphatase (YopH for Tyr kinases, lambda for Ser/Thr kinases).
+Starting from 96 kinases with crystal structures and any reported bacterial expression, we engineered a library of human kinase domain constructs and screened their coexpression with phosphatase, finding 51 kinases with yields greater than 2  mg/mL culture.
+All sequences and expression data are provided online at  \url{https://github.com/choderalab/kinase-ecoli-expression-panel}, and the plasmids are in the process of being made available through AddGene.
 \end{abstract}
 
 \maketitle
@@ -109,6 +114,10 @@ When attempting to carry out expression on a family or superfamily scale, it is 
 One source of expression construct data which is programmatically accessible is the Protein Data Bank (PDB).
 Our method is thus based around searching the PDB for relevant expression constructs.
 PDB data includes expression system and experimental construct, though as we discovered in our research, the latter suffers from frequent problems with misannotation, necessitating us to develop a method to determine authentic experimental sequences.
+
+While human kinase expression in baculovirus-infected insect cells can achieve high success rates~\cite{vertex:2004:kinase-expression,wang:protein-express-pur:2008:high-yield-kinase-insect-cells}, it cannot compete in cost or convenience with bacterial expression, and a survey of 62 full-length non-receptor human kinases found that over 50\% express well in \emph{E. coli}~\cite{vertex:2004:kinase-expression}.
+
+Phosphatase coexpression can greatly enhance bacterial kinase expression, and ensures kinases remain in an unphosphorylated form~\cite{seeliger:2005:protein-sci:kinase-expression}.
 
 All code and source files used in this project can be found at \url{https://github.com/choderalab/kinase-ecoli-expression-panel}.
 
@@ -228,7 +237,7 @@ From this initial test, 68 kinase domains expressed successfully (yield of more 
 % BIBLIOGRAPHY
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% \bibliographystyle{prsty} 
-% \bibliography{ms.bib}
+\bibliographystyle{prsty} 
+\bibliography{ms.bib}
 
 \end{document}
