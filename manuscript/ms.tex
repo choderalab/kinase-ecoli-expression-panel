@@ -60,9 +60,25 @@
 %% TITLE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \title{(Placeholder) Automatic selection of kinase expression constructs}
 
-\author{TBD}
+\author{Daniel L. Parton}
   \affiliation{Computational Biology Program, Sloan Kettering Institute, Memorial Sloan Kettering Cancer Center, New York, NY 10065}
-  %\email{daniel.parton@choderalab.org}
+  \email{daniel.parton@choderalab.org}
+\author{Sonya M. Hanson}
+  \affiliation{Computational Biology Program, Sloan Kettering Institute, Memorial Sloan Kettering Cancer Center, New York, NY 10065}
+  \email{sonya.hanson@choderalab.org}
+\author{Lucelenie Rodriguez}
+  \affiliation{Computational Biology Program, Sloan Kettering Institute, Memorial Sloan Kettering Cancer Center, New York, NY 10065}
+  \email{lucelenie.rodriguez@choderalab.org}
+\author{Scott Gradia}
+  \affiliation{QB3 MacroLab, University of California, Berkeley, CA 94720}
+  \thanks{Current address: Caribou Biosciences, Berkeley, CA 94720}
+  \email{sgradia@cariboubio.com}
+\author{Chris Jeans}
+  \affiliation{QB3 MacroLab, University of California, Berkeley, CA 94720}
+  \email{c.jeans@berkeley.edu}
+\author{Markus Seeliger}
+\affiliation{Department of Pharmacological Sciences, Stony Brook University Medical School, Stony Brook, NY 11794}
+\email{markus.seeliger@stonybrook.edu}
 \author{John D. Chodera}
  \thanks{Corresponding author}
  \email{john.chodera@choderalab.org}
@@ -74,7 +90,12 @@
 % ABSTRACT/pacs
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
-
+Kinases play a critical role in cellular signaling pathways.
+Human kinase dysregulation linked to a number of diseases, such as cancer, diabetes, and inflammation, and as a result, much of the effort in developing treatments (and perhaps 30\% of \emph{all} current drug development effort) has focused on shutting down aberrant kinases with targeted inhibitors.
+While insect and mammalian expression systems have demonstrated success rates for the expression of human kinases, these expression systems cannot compete with the simplicity and cost-effectiveness of bacterial expression systems, which historically had found human kinases difficult to express.
+Following the demonstration that phosphatase coexpression could give high yields of Src and Abl kinase domains in inexpensive bacterial expression systems~\cite{seeliger:2005:protein-sci:kinase-expression}, we have performed a large-scale expression screen to generate a library of human kinase domain constructs that express well in a simple automated His-tagged bacterial expression system when coexpressed with phosphatase (YopH for Tyr kinases, lambda for Ser/Thr kinases).
+Starting from 96 kinases with crystal structures and any reported bacterial expression, we engineered a library of human kinase domain constructs and screened their coexpression with phosphatase, finding 51 kinases with yields greater than 2  mg/mL culture.
+All sequences and expression data are provided online at  \url{https://github.com/choderalab/kinase-ecoli-expression-panel}, and the plasmids are in the process of being made available through AddGene.
 \end{abstract}
 
 \maketitle
@@ -85,14 +106,26 @@
 \section{Introduction}
 \label{section:introduction}
 
-{\color{blue} Just an outline for now.}
-We want to do large-scale expression testing across the kinase family.
-Many kinases have already been expressed in various expression systems and with different construct sequences.
-However, the exact details of the expression (if made available at all) are often buried in the Supplementary Information sections of journal articles.
-When attempting to carry out expression on a family or superfamily scale, it is not tractable to trawl through hundreds of articles to find relevant expression data.
-One source of expression construct data which is programmatically accessible is the Protein Data Bank (PDB).
-Our method is thus based around searching the PDB for relevant expression constructs.
-PDB data includes expression system and experimental construct, though as we discovered in our research, the latter suffers from frequent problems with misannotation, necessitating us to develop a method to determine authentic experimental sequences.
+Kinases play a critical role in cellular signaling pathways.  
+Perturbations to these pathways due to mutation, translocation, or upregulation events can cause one or more kinases to become highly active and cease responding normally to regulatory signals, often with disastrous consequences.
+Kinase dysregulation has been linked to a number of diseases, such as cancer, diabetes, and inflammation.
+Cancer alone is the second leading cause of death in the United States, accounting for nearly 25\% of all deaths; in 2015, over 1.7 million new cases were diagnosed, with over 580,000 deaths~\cite{acs-cancer-facts-2015}.
+Much of the effort in developing treatments (and perhaps 30\% of \emph{all} current drug development effort) has focused on shutting down aberrant kinases with targeted inhibitors.
+
+The discovery of imatinib, which specifically targets the Abl kinase dysregulated in chronic myelogenous leukemia (CML) patients to abate disease progression, was transformative in revealing the enormous therapeutic potential of selective kinase inhibitors, kindling hope that this remarkable success could be recapitulated for other cancers and diseases~\cite{stegmeier:clpt:2010:imatinib-lessons}.
+While there are now 31 FDA-approved selective kinase inhibitors, these molecules were approved for targeting only 13 out of $\sim$500 human kinases, with the vast majority targeting just a handful of kinases; the discovery of therapeutically effective inhibitors for other kinases has proven remarkably challenging.
+
+The ability to probe human kinase biochemistry, biophysics, and structural biology in the laboratory is essential to making rapid progress in the understanding of kinase regulation and the design of selective inhibitors.
+While human kinase expression in baculovirus-infected insect cells can achieve high success rates~\cite{vertex:2004:kinase-expression,wang:protein-express-pur:2008:high-yield-kinase-insect-cells}, it cannot compete in cost or convenience with bacterial expression.
+While a survey of 62 full-length non-receptor human kinases found that over 50\% express well in \emph{E. coli}~\cite{vertex:2004:kinase-expression}, there is often a desire to express and manipulate only the soluble kinase domains, since these are the molecular targets of therapy for targeted kinase inhibitors and could be studied even for receptor-type kinases.
+While removal of regulatory domains can negatively impact expression, coexpression with phosphatase was shown to greatly enhance bacterial kinase expression in Src and Abl tyrosine kinases, presumably by ensuring that kinases remain in an unphosphorylated inactive form~\cite{seeliger:2005:protein-sci:kinase-expression}.
+
+Surprisingly, the protein databank (PDB) now contains over 100 human kinases that---according to the PDB data records---were expressed in bacteria.
+Mindful that bacterial expression is often complicated by the need to tailor expression and purification protocols individually for each protein being expressed, we wondered whether a simple, uniform, automatable expression and purification protocol could be used to express a large number of human kinases to produce a convenient bacterial expression library to facilitate kinase research and selective inhibitor development.
+As a first step toward this goal, we developed a structural informatics pipeline to filter these structures and select constructs from available human kinase library for cloning into a standard set of vectors intended for phosphatase coexpression.
+Automated expression screening in ROSETTA2 [BL21(DE3)] cells found that 51 human kinase domains express with yields greater than 2 $\mu$g/mL, which should be usable for biochemical, biophysical, screening, and structural biology studies.
+
+All code and source files used in this project can be found at \url{https://github.com/choderalab/kinase-ecoli-expression-panel}, and a convenient sortable table of results can be viewed at \url{http://choderalab.github.io/kinome-data/kinase\_constructs-addgene\_hip\_sgc.html}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % METHODS
@@ -174,6 +207,7 @@ We hope eventually to develop a fully automated software package for the selecti
 
 \subsection{Expression testing}
 
+{\color{red}[JDC: This protocol is missing crucial information, like exactly which cell type was used for expression!]}
 
 For each target, the selected construct sequence was subcloned from the selected DNA plasmid.
 Expression testing performed by QB3 MacroLab.
@@ -210,7 +244,7 @@ From this initial test, 68 kinase domains expressed successfully (yield of more 
 % BIBLIOGRAPHY
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% \bibliographystyle{prsty} 
-% \bibliography{ms.bib}
+\bibliographystyle{prsty} 
+\bibliography{ms.bib}
 
 \end{document}
