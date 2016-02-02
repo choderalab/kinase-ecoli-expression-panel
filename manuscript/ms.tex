@@ -99,7 +99,7 @@ Kinases play a critical role in cellular signaling pathways.
 Human kinase dysregulation has been linked to a number of diseases, such as cancer, diabetes, and inflammation, and as a result, much of the effort in developing treatments (and perhaps 30\% of \emph{all} current drug development effort) has focused on shutting down aberrant kinases with targeted inhibitors.
 While insect and mammalian expression systems are frequently utilized for the expression of human kinases, they cannot compete with the simplicity and cost-effectiveness of bacterial expression systems, which historically had found human kinases difficult to express.
 Following the demonstration that phosphatase coexpression could give high yields of Src and Abl kinase domains in inexpensive bacterial expression systems~\cite{seeliger:2005:protein-sci:kinase-expression}, we have performed a large-scale expression screen to generate a library of His-tagged human kinase domain constructs that express well in a simple automated bacterial expression system where phosphatase coexpression (YopH for Tyr kinases, lambda for Ser/Thr kinases) is used.
-Starting from 96 kinases with crystal structures and any reported bacterial expression, we engineered a library of human kinase domain constructs and screened their coexpression with phosphatase, finding 68 kinases with yields greater than 2  mg/mL culture.
+Starting from 96 kinases with crystal structures and any reported bacterial expression, we engineered a library of human kinase domain constructs and screened their coexpression with phosphatase, finding 52 kinases with yields greater than 2 mg/L culture.
 All sequences and expression data are provided online at  \url{https://github.com/choderalab/kinase-ecoli-expression-panel}, and the plasmids are in the process of being made available through AddGene.
 \end{abstract}
 
@@ -128,7 +128,7 @@ While removal of regulatory domains can negatively impact expression, coexpressi
 The protein databank (PDB) now contains over 100 human kinases that---according to the PDB data records---were expressed in bacteria.
 Since bacterial expression is often complicated by the need to tailor expression and purification protocols individually for each protein expressed, we wondered whether a simple, uniform, automatable expression and purification protocol could be used to express a large number of human kinases to produce a convenient bacterial expression library to facilitate kinase research and selective inhibitor development.
 As a first step toward this goal, we developed a structural informatics pipeline to use available kinase structural data and associated metadata to select constructs from available human kinase libraries to clone into a standard set of vectors intended for phosphatase coexpression.
-Automated expression screening in Rosetta2 cells found that 68 human kinase domains express with yields greater than 2 $\mu$g/mL, which should be usable for biochemical, biophysical, screening, and structural biology studies.
+Automated expression screening in Rosetta2 cells found that 52 human kinase domains express with yields greater than 2 mg/L, which should be usable for biochemical, biophysical, screening, and structural biology studies.
 
 All code and source files used in this project can be found at \url{https://github.com/choderalab/kinase-ecoli-expression-panel}, and a convenient sortable table of results can be viewed at \url{http://choderalab.github.io/kinome-data/kinase\_constructs-addgene\_hip\_sgc.html}.
 
@@ -268,7 +268,7 @@ Surprisingly, the most highly sampled family was the CAMK family, suggesting tha
 \subsection{Small-scale kinase expression test in \emph{E. coli}}
 
 A panel containing the 96 kinase domain constructs selected through our semi-automated method, was tested for expression in \emph{E. coli}. 
-From this initial test, 68 kinase domains showed detectable expression (yield of more than 2 ng/$\mu$l eluate) (Table~\ref{expression_table}).
+From this initial test, 52 kinase domains showed reasonable expression (yield of more than 2 mg/L in the eluate) (Table~\ref{expression_table}).
 While the initial panel of 96 kinases was well-distributed across kinase families, the final most highly expressing (yield of more than 100 ng/$\mu$l eluate) were not as evenly distributed (Figure~\ref{fig:kinome_expression_tree}). 
 The 17 most highly expressing kinases showed relatively high purity after elution, though we note that eluting via TEV site cleavage results in a quantity of TEV protease in the eluate (Figure~\ref{fig:caliper_image}). 
 
