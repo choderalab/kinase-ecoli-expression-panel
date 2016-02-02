@@ -162,9 +162,11 @@ The majority of PDB entries returned had an {\tt EXPRESSION\_SYSTEM} tag of "ESC
 The PDB coordinate files also contain SEQRES records, which should contain the protein sequence used in the crystallography or NMR experiment.
 According to the PDB documentation (\url{http://deposit.rcsb.org/format-faq-v1.html}), "All residues in the crystal or in solution, including residues not present in the model (i.e., disordered, lacking electron density, cloning artifacts, HIS tags) are included in the SEQRES records."
 However, we found that these records are very often misannotated, instead representing only the crystallographically resolved residues.
-Since expression levels can be greatly affected by insertions or deletions of only one or a few residues at either terminus {\color{blue}[DLP: ?CITE, or reference our 96-construct Abl1 expression panel]}, it is important to know the full experimental sequence, and we thus needed a way to measure the authenticity of a given SEQRES record.
+Since expression levels can be greatly affected by insertions or deletions of only one or a few residues at either terminus~\cite{klock_combining_2008}, it is important to know the full experimental sequence, and we thus needed a way to measure the authenticity of a given SEQRES record.
+%{\color{blue}[DLP: ?CITE, or reference our 96-construct Abl1 expression panel]}
 We developed a crude measure by hypothesizing that a) most crystal structures would be likely to have at least one or a few unresolved residues at one or both termini and b) the presence of an expression tag (which is typically not crystallographically resolved) would indicate an authentic SEQRES record.
-To achieve this, unresolved residues were first defined by comparing the SEQRES sequence to the resolved sequence, using the SIFTS service (CITE) to determine which residues were not present in the canonical isoform sequence.
+To achieve this, unresolved residues were first defined by comparing the SEQRES sequence to the resolved sequence, using the SIFTS service to determine which residues were not present in the canonical isoform sequence.
+%SIFTS service (CITE)
 Then regular expression pattern matching was used to detect common expression tags at the N- or C-termini.
 Sequences with a detected expression tag were given a score of 2, while those with any unresolved sequence at the termini were given a score of 1, and the remainder were given a score of 0.
 This data was not used to filter out PDB structures at this stage, but was stored to allow for subsequent selection of PDB constructs based on likely authenticity.
