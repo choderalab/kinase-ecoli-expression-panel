@@ -243,18 +243,25 @@ We are currently making the library of kinase domain constructs, generated in th
 
 \subsection{PDBs mining results}
 
+Selecting the kinases and their constructs for this expression trial was primarily on the basis of expected success: these specific kinase constructs previously expressed and purified easily enough that a crystal structure could be solved.
+While the final expression and characterization of these kinases was our ultimate goal, the patterns that popped up via the use of our semi-automated pipeline are also worth noting.
+The most highly sampled family in our final panel, for example, was the CAMK family (Figure~\ref{fig:kinases_by_family}).
+
+
 \begin{figure}[tb]
    \includegraphics[width=\columnwidth]{figures/ncandidates_byfamily.png}
-  \caption{{\bf Histogram of kinases in panel by family.}
-   Plot of 96 kinases expressed in the expression panel, separated out by family.
+  \caption{{\bf Distribution of kinases in final expression panel by family.}
+   Histogram of the 96 kinases expressed in the expression panel, separated out by kinase family.
    }
-  \label{fig:calliper_image}
+  \label{fig:kinases_by_family}
 \end{figure}
 
 \subsection{Small-scale kinase expression test in E. coli}
 
 A panel containing the 96 kinase domain constructs selected through our semi-automated method, was tested for expression in E. coli. 
-From this initial test, 68 kinase domains expressed successfully (yield of more than 2 ng/$\mu$L ). 
+From this initial test, 68 kinase domains expressed successfully (yield of more than 2 ng/$\mu$L ) (Table~\ref{expression_table}).
+While the initial panel of 96 kinases was well-distributed across kinase families, the final most highly expressing (yield of more than 100 ng/$\mu$L ) were not as evenly distributed (Figure~\ref{fig:kinome_expression_tree}). 
+The 17 most highly expressing kinases all were quite pure with some TEV contaminants still present in Calliper gel images after elution with Imidazole (Figure~\ref{fig:calliper_image}). 
 
 \begin{table*}[]
 \centering
@@ -263,7 +270,7 @@ From this initial test, 68 kinase domains expressed successfully (yield of more 
 \footnotesize
 \begin{tabular}{p{3.5cm}p{4cm}c}
 \toprule
-\bf{kinase expressed} & \bf{phosphatase co-expressed} & \bf{concentration ($ng/ \mu l$)} \\
+\bf{kinase expressed} & \bf{phosphatase co-expressed} & \bf{concentration (ng/$\mu$l)} \\
 \midrule
 MK14\_HUMAN\_D0  & Lambda                    & 530                   \\
 VRK3\_HUMAN\_D0  & Lambda                    & 506                   \\
