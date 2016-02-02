@@ -128,7 +128,7 @@ While removal of regulatory domains can negatively impact expression, coexpressi
 The protein databank (PDB) now contains over 100 human kinases that---according to the PDB data records---were expressed in bacteria.
 Since bacterial expression is often complicated by the need to tailor expression and purification protocols individually for each protein expressed, we wondered whether a simple, uniform, automatable expression and purification protocol could be used to express a large number of human kinases to produce a convenient bacterial expression library to facilitate kinase research and selective inhibitor development.
 As a first step toward this goal, we developed a structural informatics pipeline to use available kinase structural data and associated metadata to select constructs from available human kinase libraries to clone into a standard set of vectors intended for phosphatase coexpression.
-Automated expression screening in Rosetta2 cells found that 52 human kinase domains express with yields greater than 2 mg/L, which should be usable for biochemical, biophysical, screening, and structural biology studies.
+Automated expression screening in Rosetta2 cells found that 52 human kinase domains express with yields greater than 2 mg/L culture, which should be usable for biochemical, biophysical, screening, and structural biology studies.
 
 All code and source files used in this project can be found at \url{https://github.com/choderalab/kinase-ecoli-expression-panel}, and a convenient sortable table of results can be viewed at \url{http://choderalab.github.io/kinome-data/kinase\_constructs-addgene\_hip\_sgc.html}.
 
@@ -268,13 +268,13 @@ Surprisingly, the most highly sampled family was the CAMK family, suggesting tha
 \subsection{Small-scale kinase expression test in \emph{E. coli}}
 
 A panel containing the 96 kinase domain constructs selected through our semi-automated method, was tested for expression in \emph{E. coli}. 
-From this initial test, 52 kinase domains showed reasonable expression (yield of more than 2 mg/L in the eluate) (Table~\ref{expression_table}).
-While the initial panel of 96 kinases was well-distributed across kinase families, the final most highly expressing (yield of more than 100 ng/$\mu$l eluate) were not as evenly distributed (Figure~\ref{fig:kinome_expression_tree}). 
+From this initial test, 52 kinase domains showed reasonable expression (yield of more than 2 ng/$\mu$L eluate, which corresponds to 2 mg/L culture) (Table~\ref{expression_table}).
+While the initial panel of 96 kinases was well-distributed across kinase families, the final most highly expressing (yield of more than 12 mg/L kinase) were not as evenly distributed (Figure~\ref{fig:kinome_expression_tree}). 
 The 17 most highly expressing kinases showed relatively high purity after elution, though we note that eluting via TEV site cleavage results in a quantity of TEV protease in the eluate (Figure~\ref{fig:caliper_image}). 
 
 \begin{table*}[]
 \centering
-\caption{{\bf Expression results by kinase.} Yield (determined by Caliper GX II quantitation of the expected size band) reported in ng/$\mu$l eluate, where total eluate volume was 120 $\mu$l from 900 $\mu$L bacterial culture.}
+\caption{{\bf Expression results by kinase.} Yield (determined by Caliper GX II quantitation of the expected size band) reported in mg/L culture, where total eluate volume was 120 $\mu$l from 900 $\mu$L bacterial culture.}
 \label{expression_table}
 \footnotesize
 \begin{tabular}{p{3.5cm}p{4cm}c}
@@ -368,7 +368,7 @@ FAK2\_HUMAN\_D0  & Truncated YopH164         & 0.3                             \
 \begin{figure*}[tb]
    \includegraphics[width=\columnwidth]{figures/caliper_image.png}
   \caption{{\bf Synthetic gel image rendering of highest expressing kinases.}
-   Caliper GX II synthetic gel image rendering of kinases expressing > 25 mg/L from microfluidic capillary electrophoresis quantitation.
+   Caliper GX II synthetic gel image rendering of kinases expressing > 25 mg/L culture from microfluidic capillary electrophoresis quantitation.
    }
   \label{fig:caliper_image}
 \end{figure*}
