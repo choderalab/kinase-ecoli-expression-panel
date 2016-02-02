@@ -9,6 +9,7 @@
 \usepackage{alltt}
 \usepackage{fancyvrb}
 
+
 %\usepackage{palatino}
 
 %\usepackage{palatino}
@@ -44,6 +45,7 @@
 \usepackage{verbatim}
 \usepackage[colorlinks=true,citecolor=blue,linkcolor=blue]{hyperref}
 \usepackage[group-separator={,}]{siunitx}
+\usepackage{booktabs}
 
 % Justification
 \captionsetup{singlelinecheck=off}
@@ -245,6 +247,99 @@ We are currently making the library of kinase domain constructs, generated in th
 
 A panel containing the 96 kinase domain constructs selected through our semi-automated method, was tested for expression in E. coli. 
 From this initial test, 68 kinase domains expressed successfully (yield of more than 2 ng/$\mu$L ). 
+
+\begin{table*}[]
+\centering
+\caption{Expression results by kinase}
+\label{expression_results}
+\footnotesize
+\begin{tabular}{p{3.5cm}p{4cm}c}
+\toprule
+\bf{kinase expressed} & \bf{phosphatase co-expressed} & \bf{concentration ($ng/ \mu l$)} \\
+\midrule
+MK14\_HUMAN\_D0  & Lambda                    & 530                   \\
+VRK3\_HUMAN\_D0  & Lambda                    & 506                   \\
+GAK\_HUMAN\_D0   & Lambda                    & 485                   \\
+CSK\_HUMAN\_D0   & Truncated YopH164         & 469                   \\
+VRK1\_HUMAN\_D0  & Lambda                    & 467                   \\
+KC1G3\_HUMAN\_D0 & Lambda                    & 422                   \\
+FES\_HUMAN\_D0   & Truncated YopH164         & 330                   \\
+PMYT1\_HUMAN\_D0 & Lambda                    & 285                   \\
+MK03\_HUMAN\_D0  & Lambda                    & 273                   \\
+STK3\_HUMAN\_D0  & Lambda                    & 257                   \\
+DYR1A\_HUMAN\_D0 & Lambda                    & 256                   \\
+KC1G1\_HUMAN\_D0 & Lambda                    & 256                   \\
+MK11\_HUMAN\_D0  & Lambda                    & 238                   \\
+MK13\_HUMAN\_D0  & Lambda                    & 238                   \\
+EPHB1\_HUMAN\_D0 & Truncated YopH164         & 217                   \\
+MK08\_HUMAN\_D0  & Lambda                    & 214                   \\
+CDK16\_HUMAN\_D0 & Lambda                    & 202                   \\
+EPHB2\_HUMAN\_D0 & Truncated YopH164         & 188                   \\
+PAK4\_HUMAN\_D0  & Lambda                    & 179                   \\
+CDKL1\_HUMAN\_D0 & Lambda                    & 174                   \\
+SRC\_HUMAN\_D0   & Truncated YopH164         & 165                   \\
+STK16\_HUMAN\_D0 & Lambda                    & 155                   \\
+MAPK3\_HUMAN\_D0 & Lambda                    & 141                   \\
+PAK6\_HUMAN\_D0  & Lambda                    & 135                   \\
+CSK22\_HUMAN\_D0 & Lambda                    & 134                   \\
+MERTK\_HUMAN\_D0 & Truncated YopH164         & 126                   \\
+PAK7\_HUMAN\_D0  & Lambda                    & 110                   \\
+CSK21\_HUMAN\_D0 & Lambda                    & 109                   \\
+EPHA3\_HUMAN\_D0 & Truncated YopH164         & 106                   \\
+BMPR2\_HUMAN\_D0 & Lambda                    & 106                   \\
+M3K5\_HUMAN\_D0  & Lambda                    & 105                   \\
+KCC2G\_HUMAN\_D0 & Lambda                    & 100                   \\
+E2AK2\_HUMAN\_D0 & Lambda                    & 87                    \\
+MK01\_HUMAN\_D0  & Lambda                    & 84                    \\
+CSKP\_HUMAN\_D0  & Lambda                    & 76                    \\
+CHK2\_HUMAN\_D0  & Lambda                    & 61                    \\
+KC1G2\_HUMAN\_D0 & Lambda                    & 57                    \\
+DMPK\_HUMAN\_D0  & Lambda                    & 57                    \\
+KCC2B\_HUMAN\_D0 & Lambda                    & 53                    \\
+FGFR1\_HUMAN\_D0 & Truncated YopH164         & 46                    \\
+KS6A1\_HUMAN\_D1 & Lambda                    & 43                    \\
+DAPK3\_HUMAN\_D0 & Lambda                    & 30                    \\
+STK10\_HUMAN\_D0 & Lambda                    & 28                    \\
+KC1D\_HUMAN\_D0  & Lambda                    & 28                    \\
+KC1E\_HUMAN\_D0  & Lambda                    & 26                    \\
+NEK1\_HUMAN\_D0  & Lambda                    & 25                    \\
+CDK2\_HUMAN\_D0  & Lambda                    & 23                    \\
+ABL1\_HUMAN\_D0  & Truncated YopH164         & 19                    \\
+DAPK1\_HUMAN\_D0 & Lambda                    & 18                    \\
+DYRK2\_HUMAN\_D0 & Lambda                    & 18                    \\
+HASP\_HUMAN\_D0  & Lambda                    & 17                    \\
+FGFR3\_HUMAN\_D0 & Truncated YopH164         & 17                    \\
+EPHB3\_HUMAN\_D0 & Truncated YopH164         & 13                    \\
+SLK\_HUMAN\_D0   & Lambda                    & 12                    \\
+KCC2D\_HUMAN\_D0 & Lambda                    & 12                    \\
+NEK7\_HUMAN\_D0  & Lambda                    & 10                    \\
+PHKG2\_HUMAN\_D0 & Lambda                    & 10                    \\
+VRK2\_HUMAN\_D0  & Lambda                    & 9                     \\
+AAPK2\_HUMAN\_D0 & Lambda                    & 8                     \\
+AURKA\_HUMAN\_D0 & Lambda                    & 8                     \\
+MARK3\_HUMAN\_D0 & Lambda                    & 8                     \\
+KAPCA\_HUMAN\_D0 & Lambda                    & 7                     \\
+STK24\_HUMAN\_D0 & Lambda                    & 6                     \\
+VGFR1\_HUMAN\_D0 & Truncated YopH164         & 4                     \\
+KCC4\_HUMAN\_D0  & Lambda                    & 3                     \\
+KCC1G\_HUMAN\_D0 & Lambda                    & 2                     \\
+KCC2A\_HUMAN\_D0 & Lambda                    & 2                     \\
+FAK2\_HUMAN\_D0  & Truncated YopH164         & 2                     \\             
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\begin{figure}[tb]
+   \includegraphics[width=\columnwidth]{kinome_expression.png}
+  \caption{{\bf Representation of kinase domain expression results on phylogenetic tree.}
+  Dark green circles represent kinases with expression above 250 $ng/ \mu l$.
+  Light green circles represent kinases with expression between 100 and 250 $ng/ \mu l$.
+  Yellow circles represent kinases with expression between 50 and 100 $ng/ \mu l$.
+  Yellow circles represent kinases with any expression up to 50 $ng/ \mu l$.
+  Image made with KinMap: \href{http://www.kinhub.org/kinmap}{http://www.kinhub.org/kinmap}. 
+   }
+  \label{fig:kinome_expression_tree}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % BIBLIOGRAPHY
