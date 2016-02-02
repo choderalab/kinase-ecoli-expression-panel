@@ -96,9 +96,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
 Kinases play a critical role in cellular signaling pathways.
-Human kinase dysregulation linked to a number of diseases, such as cancer, diabetes, and inflammation, and as a result, much of the effort in developing treatments (and perhaps 30\% of \emph{all} current drug development effort) has focused on shutting down aberrant kinases with targeted inhibitors.
-While insect and mammalian expression systems have demonstrated success rates for the expression of human kinases, these expression systems cannot compete with the simplicity and cost-effectiveness of bacterial expression systems, which historically had found human kinases difficult to express.
-Following the demonstration that phosphatase coexpression could give high yields of Src and Abl kinase domains in inexpensive bacterial expression systems~\cite{seeliger:2005:protein-sci:kinase-expression}, we have performed a large-scale expression screen to generate a library of human kinase domain constructs that express well in a simple automated His-tagged bacterial expression system when coexpressed with phosphatase (YopH for Tyr kinases, lambda for Ser/Thr kinases).
+Human kinase dysregulation has been linked to a number of diseases, such as cancer, diabetes, and inflammation, and as a result, much of the effort in developing treatments (and perhaps 30\% of \emph{all} current drug development effort) has focused on shutting down aberrant kinases with targeted inhibitors.
+While insect and mammalian expression systems are frequently utilized for the expression of human kinases, they cannot compete with the simplicity and cost-effectiveness of bacterial expression systems, which historically had found human kinases difficult to express.
+Following the demonstration that phosphatase coexpression could give high yields of Src and Abl kinase domains in inexpensive bacterial expression systems~\cite{seeliger:2005:protein-sci:kinase-expression}, we have performed a large-scale expression screen to generate a library of His-tagged human kinase domain constructs that express well in a simple automated bacterial expression system where phosphatase coexpression (YopH for Tyr kinases, lambda for Ser/Thr kinases) is used.
 Starting from 96 kinases with crystal structures and any reported bacterial expression, we engineered a library of human kinase domain constructs and screened their coexpression with phosphatase, finding 68 kinases with yields greater than 2  mg/mL culture.
 All sequences and expression data are provided online at  \url{https://github.com/choderalab/kinase-ecoli-expression-panel}, and the plasmids are in the process of being made available through AddGene.
 \end{abstract}
@@ -127,8 +127,8 @@ While removal of regulatory domains can negatively impact expression, coexpressi
 
 The protein databank (PDB) now contains over 100 human kinases that---according to the PDB data records---were expressed in bacteria.
 Since bacterial expression is often complicated by the need to tailor expression and purification protocols individually for each protein expressed, we wondered whether a simple, uniform, automatable expression and purification protocol could be used to express a large number of human kinases to produce a convenient bacterial expression library to facilitate kinase research and selective inhibitor development.
-As a first step toward this goal, we developed a structural informatics pipeline to find kinases already in the PDB and select constructs from available human kinase libraries to clone into a standard set of vectors intended for phosphatase coexpression.
-Automated expression screening in ROSETTA2 [BL21(DE3)] cells found that 68 human kinase domains express with yields greater than 2 $\mu$g/mL, which should be usable for biochemical, biophysical, screening, and structural biology studies.
+As a first step toward this goal, we developed a structural informatics pipeline to use available kinase structural data and associated metadata to select constructs from available human kinase libraries to clone into a standard set of vectors intended for phosphatase coexpression.
+Automated expression screening in Rosetta2 cells found that 68 human kinase domains express with yields greater than 2 $\mu$g/mL, which should be usable for biochemical, biophysical, screening, and structural biology studies.
 
 All code and source files used in this project can be found at \url{https://github.com/choderalab/kinase-ecoli-expression-panel}, and a convenient sortable table of results can be viewed at \url{http://choderalab.github.io/kinome-data/kinase\_constructs-addgene\_hip\_sgc.html}.
 
@@ -154,7 +154,7 @@ The sequences were derived from the canonical isoform as determined by UniProt.
 
 Each target kinase gene was matched with the same gene in any other species where present, and UniProt data was downloaded for those genes also.
 The UniProt data included a list of PDB structures which contain the protein, as well as their sequence spans in the coordinates of the UniProt canonical isoform.
-This information was used to filter out PDB structures which did not include the protein kinase domain - structures were kept if they included the protein kinase domain sequence less 30 residues at each end.
+This information was used to filter out PDB structures which did not include the protein kinase domain; structures were kept if they included the protein kinase domain sequence less 30 residues at each end.
 PDB coordinate files were then downloaded for each PDB entry.
 The coordinate files contain various metadata, including an {\tt EXPRESSION\_SYSTEM} annotation, which was used to filter PDB entries to keep only those which include the phrase "ESCHERICHIA COLI".
 The majority of PDB entries returned had an {\tt EXPRESSION\_SYSTEM} tag of "ESCHERICHIA COLI", while a small number had "ESCHERICHIA COLI BL21" or "ESCHERICHIA COLI BL21(DE3).
@@ -214,10 +214,8 @@ We hope eventually to develop a fully automated software package for the selecti
 
 \subsection{Expression testing}
 
-%{\color{red}[JDC: This protocol is missing crucial information, like exactly which cell type was used for expression!]}
-
 For each target, the selected construct sequence was subcloned from the selected DNA plasmid.
-Expression testing was performed by the QB3 MacroLab.
+Expression testing was performed by the QB3 MacroLab (QB3 MacroLab, University of California, Berkeley, CA 94720) [\url{http://qb3.berkeley.edu/qb3/macrolab/}], a core facility offering automated gene cloning and recombinant protein expression and purification services.
 
 Each kinase domain was tagged with a N-terminal His10-TEV and coexpressed with either the truncated YopH164 for Tyr kinases or lambda phosphatase for Ser/Thr kinases.
 All construct sequences were cloned into the 2BT10 plasmid, an AMP resistant ColE1 plasmid with a T7 promoter, using LIC (ligation-independent cloning).
@@ -239,8 +237,10 @@ Target proteins were eluted by a 2 hour incubation at room temperature with 10 $
 Nickel Buffer B (25 mM HEPES pH 7.5, 5\% glycerol, 400 mM NaCl, 400 mM imidazole, 1 mM BME) was used to elute TEV resistant material remaining on the resin.
 Untagged protein eluted with TEV protease was run on a LabChip GX II Microfluidic system to analyze the major protein species present. 
 Samples of total cell lysate, soluble cell lysate and Nickel Buffer B elution were run on a SDS-PAGE for analysis. 
+% JDC: I don't recall seeing data from this SDS-PAGE analysis.  Was this actually done?  Where is the data?
 
-We are currently making the library of kinase domain constructs, generated in this work, available for distribution through the plasmid repository \href{https://www.addgene.org/}{Addgene} . In the meantime, you can contact the  \href{http://www.choderalab.org/members}{Chodera Lab} for a plasmid request.
+We are currently making the library of kinase domain constructs, generated in this work, available for distribution through the plasmid repository \href{https://www.addgene.org/}{Addgene}. 
+In the meantime, requests for plasmids can be directed to \url{requests@choderalab.org}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % RESULTS
@@ -248,36 +248,38 @@ We are currently making the library of kinase domain constructs, generated in th
 \section{Results}
 \label{section:results}
 
-\subsection{PDBs mining results}
+\subsection{PDB mining results}
 
-Selecting the kinases and their constructs for this expression trial was primarily on the basis of expected success: these specific kinase constructs previously expressed and purified easily enough that a crystal structure could be solved.
-While the final expression and characterization of these kinases was our ultimate goal, the patterns that popped up via the use of our semi-automated pipeline are also worth noting.
-The most highly sampled family in our final panel, for example, was the CAMK family (Figure~\ref{fig:kinases_by_family}).
-
+Selecting the kinases and their constructs for this expression trial was primarily on the basis of expected success: these specific kinase constructs were bacterially expressed and purified to a degree that a crystal structure could be solved.
+While the expression protocols used to produce protein for crystallographic studies were likely tailored to maximize expression for individual proteins, we considered these kinases had a high chance of expressing in our semi-automated expression pipeline where the \emph{same} protocol is utilized for all kinases.
+Statistics of the number of kinases obtained form the PDB mining procedure are shown in Figure~\ref{fig:kinases_by_family}.
+Surprisingly, the most highly sampled family was the CAMK family, suggesting that other researchers may have found this family particularly amenable to bacterial expression.
+% JDC: We might go back sometime and see what fraction of total CAMK family kinase structures were bacterially expressed.
 
 \begin{figure}[tb]
    \includegraphics[width=\columnwidth]{figures/ncandidates_byfamily.png}
-  \caption{{\bf Distribution of kinases in final expression panel by family.}
-   Histogram of the 96 kinases expressed in the expression panel, separated out by kinase family.
+  % JDC: Later, we should use a PDF instead of PNG file for plots
+   \caption{{\bf Distribution of kinases in expression test panel by family.}
+   Histogram of the 96 kinases in the expression test panel, separated out by kinase family.
    }
   \label{fig:kinases_by_family}
 \end{figure}
 
-\subsection{Small-scale kinase expression test in E. coli}
+\subsection{Small-scale kinase expression test in \emph{E. coli}}
 
-A panel containing the 96 kinase domain constructs selected through our semi-automated method, was tested for expression in E. coli. 
-From this initial test, 68 kinase domains expressed successfully (yield of more than 2 ng/$\mu$L ) (Table~\ref{expression_table}).
-While the initial panel of 96 kinases was well-distributed across kinase families, the final most highly expressing (yield of more than 100 ng/$\mu$L ) were not as evenly distributed (Figure~\ref{fig:kinome_expression_tree}). 
-The 17 most highly expressing kinases all were quite pure with some TEV contaminants still present in Calliper gel images after elution with Imidazole (Figure~\ref{fig:calliper_image}). 
+A panel containing the 96 kinase domain constructs selected through our semi-automated method, was tested for expression in \emph{E. coli}. 
+From this initial test, 68 kinase domains showed detectable expression (yield of more than 2 ng/$\mu$l eluate) (Table~\ref{expression_table}).
+While the initial panel of 96 kinases was well-distributed across kinase families, the final most highly expressing (yield of more than 100 ng/$\mu$l eluate) were not as evenly distributed (Figure~\ref{fig:kinome_expression_tree}). 
+The 17 most highly expressing kinases showed relatively high purity after elution, though we note that eluting via TEV site cleavage results in a quantity of TEV protease in the eluate (Figure~\ref{fig:caliper_image}). 
 
 \begin{table*}[]
 \centering
-\caption{Expression results by kinase}
+\caption{{\bf Expression results by kinase.} Yield (determined by Caliper GX II quantitation of the expected size band) reported in ng/$\mu$l eluate, where total eluate volume was 120 $\mu$l from 900 $\mu$L bacterial culture.}
 \label{expression_table}
 \footnotesize
 \begin{tabular}{p{3.5cm}p{4cm}c}
 \toprule
-\bf{kinase expressed} & \bf{phosphatase co-expressed} & \bf{concentration (ng/$\mu$l)} \\
+\bf{kinase expressed} & \bf{phosphatase co-expressed} & \bf{concentration (ng/$\mu$l eluate)} \\
 \midrule
 MK14\_HUMAN\_D0  & Lambda                    & 530                   \\
 VRK3\_HUMAN\_D0  & Lambda                    & 506                   \\
@@ -354,23 +356,31 @@ FAK2\_HUMAN\_D0  & Truncated YopH164         & 2                     \\
 \begin{figure}[tb]
    \includegraphics[width=\columnwidth]{figures/kinome_expression.png}
   \caption{{\bf Representation of kinase domain expression results on phylogenetic tree.}
-  Dark green circles represent kinases with expression above 250 $ng/ \mu l$.
-  Light green circles represent kinases with expression between 100 and 250 $ng/ \mu l$.
-  Yellow circles represent kinases with expression between 50 and 100 $ng/ \mu l$.
-  Yellow circles represent kinases with any expression up to 50 $ng/ \mu l$.
+  Dark green circles represent kinases with expression above 250 $ng/ \mu l$ eluate.
+  Light green circles represent kinases with expression between 100 and 250 $ng/ \mu l$ eluate.
+  Yellow circles represent kinases with expression between 50 and 100 $ng/ \mu l$ eluate.
+  Yellow circles represent kinases with any expression up to 50 $ng/ \mu l$ eluate.
   Image made with KinMap: \href{http://www.kinhub.org/kinmap}{http://www.kinhub.org/kinmap}. 
    }
   \label{fig:kinome_expression_tree}
 \end{figure}
 
 \begin{figure*}[tb]
-   \includegraphics[width=\columnwidth]{figures/calliper_image.png}
-  \caption{{\bf Gel image of highest expressing kinases.}
-   Calliper gel image of kinases expressing > 200 $ng/ \mu l$.
+   \includegraphics[width=\columnwidth]{figures/caliper_image.png}
+  \caption{{\bf Synthetic gel image rendering of highest expressing kinases.}
+   Caliper GX II synthetic gel image rendering of kinases expressing > 200 $ng/ \mu l$ eluate from microfluidic capillary electrophoresis quantitation.
    }
-  \label{fig:calliper_image}
+  \label{fig:caliper_image}
 \end{figure*}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DISCUSSION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Discussion}
+\label{section:discussion}
+
+Bacterial coexpression of kinases appears to be a viable approach for studying a wide variety of human kinase domain constructs.
+We hope that other laboratories find these resources useful in their own work.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % BIBLIOGRAPHY
