@@ -243,6 +243,14 @@ We are currently making the library of kinase domain constructs, generated in th
 
 \subsection{PDBs mining results}
 
+\begin{figure}[tb]
+   \includegraphics[width=\columnwidth]{figures/ncandidates_byfamily.png}
+  \caption{{\bf Histogram of kinases in panel by family.}
+   Plot of 96 kinases expressed in the expression panel, separated out by family.
+   }
+  \label{fig:calliper_image}
+\end{figure}
+
 \subsection{Small-scale kinase expression test in E. coli}
 
 A panel containing the 96 kinase domain constructs selected through our semi-automated method, was tested for expression in E. coli. 
@@ -251,7 +259,7 @@ From this initial test, 68 kinase domains expressed successfully (yield of more 
 \begin{table*}[]
 \centering
 \caption{Expression results by kinase}
-\label{expression_results}
+\label{expression_table}
 \footnotesize
 \begin{tabular}{p{3.5cm}p{4cm}c}
 \toprule
@@ -330,7 +338,7 @@ FAK2\_HUMAN\_D0  & Truncated YopH164         & 2                     \\
 \end{table*}
 
 \begin{figure}[tb]
-   \includegraphics[width=\columnwidth]{kinome_expression.png}
+   \includegraphics[width=\columnwidth]{figures/kinome_expression.png}
   \caption{{\bf Representation of kinase domain expression results on phylogenetic tree.}
   Dark green circles represent kinases with expression above 250 $ng/ \mu l$.
   Light green circles represent kinases with expression between 100 and 250 $ng/ \mu l$.
@@ -340,6 +348,15 @@ FAK2\_HUMAN\_D0  & Truncated YopH164         & 2                     \\
    }
   \label{fig:kinome_expression_tree}
 \end{figure}
+
+\begin{figure*}[tb]
+   \includegraphics[width=\columnwidth]{figures/calliper_image.png}
+  \caption{{\bf Gel image of highest expressing kinases.}
+   Calliper gel image of kinases expressing > 200 $ng/ \mu l$.
+   }
+  \label{fig:calliper_image}
+\end{figure*}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % BIBLIOGRAPHY
