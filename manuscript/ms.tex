@@ -125,9 +125,9 @@ While human kinase expression in baculovirus-infected insect cells can achieve h
 While a survey of 62 full-length non-receptor human kinases found that over 50\% express well in \emph{E. coli}~\cite{vertex:2004:kinase-expression}, there is often a desire to express and manipulate only the soluble kinase domains, since these are the molecular targets of therapy for targeted kinase inhibitors and could be studied even for receptor-type kinases.
 While removal of regulatory domains can negatively impact expression, coexpression with phosphatase was shown to greatly enhance bacterial kinase expression in Src and Abl tyrosine kinases, presumably by ensuring that kinases remain in an unphosphorylated inactive form~\cite{seeliger:2005:protein-sci:kinase-expression}.
 
-Surprisingly, the protein databank (PDB) now contains over 100 human kinases that---according to the PDB data records---were expressed in bacteria.
-Mindful that bacterial expression is often complicated by the need to tailor expression and purification protocols individually for each protein being expressed, we wondered whether a simple, uniform, automatable expression and purification protocol could be used to express a large number of human kinases to produce a convenient bacterial expression library to facilitate kinase research and selective inhibitor development.
-As a first step toward this goal, we developed a structural informatics pipeline to filter these structures and select constructs from available human kinase library for cloning into a standard set of vectors intended for phosphatase coexpression.
+The protein databank (PDB) now contains over 100 human kinases that---according to the PDB data records---were expressed in bacteria.
+Since bacterial expression is often complicated by the need to tailor expression and purification protocols individually for each protein expressed, we wondered whether a simple, uniform, automatable expression and purification protocol could be used to express a large number of human kinases to produce a convenient bacterial expression library to facilitate kinase research and selective inhibitor development.
+As a first step toward this goal, we developed a structural informatics pipeline to find kinases already in the PDB and select constructs from available human kinase libraries to clone into a standard set of vectors intended for phosphatase coexpression.
 Automated expression screening in ROSETTA2 [BL21(DE3)] cells found that 68 human kinase domains express with yields greater than 2 $\mu$g/mL, which should be usable for biochemical, biophysical, screening, and structural biology studies.
 
 All code and source files used in this project can be found at \url{https://github.com/choderalab/kinase-ecoli-expression-panel}, and a convenient sortable table of results can be viewed at \url{http://choderalab.github.io/kinome-data/kinase\_constructs-addgene\_hip\_sgc.html}.
@@ -163,7 +163,7 @@ The PDB coordinate files also contain SEQRES records, which should contain the p
 According to the PDB documentation (\url{http://deposit.rcsb.org/format-faq-v1.html}), "All residues in the crystal or in solution, including residues not present in the model (i.e., disordered, lacking electron density, cloning artifacts, HIS tags) are included in the SEQRES records."
 However, we found that these records are very often misannotated, instead representing only the crystallographically resolved residues.
 Since expression levels can be greatly affected by insertions or deletions of only one or a few residues at either terminus {\color{blue}[DLP: ?CITE, or reference our 96-construct Abl1 expression panel]}, it is important to know the full experimental sequence, and we thus needed a way to measure the authenticity of a given SEQRES record.
-We developed a crude measure by hypothesizing that a) most crystal structures would be likely to have at least one or a few unresolved residues at one or both termini, and b) the presence of an expression tag (which is typically not crystallographically resolved) would indicate an authentic SEQRES record.
+We developed a crude measure by hypothesizing that a) most crystal structures would be likely to have at least one or a few unresolved residues at one or both termini and b) the presence of an expression tag (which is typically not crystallographically resolved) would indicate an authentic SEQRES record.
 To achieve this, unresolved residues were first defined by comparing the SEQRES sequence to the resolved sequence, using the SIFTS service (CITE) to determine which residues were not present in the canonical isoform sequence.
 Then regular expression pattern matching was used to detect common expression tags at the N- or C-termini.
 Sequences with a detected expression tag were given a score of 2, while those with any unresolved sequence at the termini were given a score of 1, and the remainder were given a score of 0.
@@ -187,7 +187,7 @@ Candidate sequence constructs were drawn from two sources - PDB constructs and t
 The latter sequences were included because the SGC plasmid library was the only one of the three libraries which had been successfully tested for E. coli expression.
 
 For most of the kinase domain targets, multiple candidate sequence constructs were available.
-To select the most appropriate sequence construct, we sorted them first by authenticity score (i.e. those with detected expression tags were ranked above those with any other sequence extraneous to the domain span; while those with no extraneous sequence had already been filtered out), then by the number of conflicts relative to the UniProt domain sequence, then by the number of residues extraneous to the UniProt domain sequence span.
+To select the most appropriate sequence construct, we sorted them first by authenticity score, then by the number of conflicts relative to the UniProt domain sequence, then by the number of residues extraneous to the UniProt domain sequence span.
 The top-ranked construct was then chosen.
 In cases where multiple plasmids were available, these were sorted first by the number of conflicts relative to the UniProt domain sequence, then by the number of residues extraneous to the UniProt domain sequence span, and the top-ranked plasmid was chosen.
 
@@ -196,14 +196,14 @@ We therefore selected these construct sequences for expression testing.
 
 A sortable table of results can be viewed at \url{http://choderalab.github.io/kinome-data/kinase\_constructs-addgene\_hip\_sgc.html}.
 
-{
-\color{blue}
-TODO maybe include a figure to help illustrate the above (but may be too complicated):
+%{
+%\color{blue}
+%TODO maybe include a figure to help illustrate the above (but may be too complicated):
 % Get UniProt canonical isoform sequence
 % Interested only in PK domain
 % Then get relevant PDB structures - keep only those which include the PK domain less 30 residues at either end.
 % ...
-}
+%}
 
 \subsubsection{Other notes}
 
@@ -212,7 +212,7 @@ We hope eventually to develop a fully automated software package for the selecti
 
 \subsection{Expression testing}
 
-{\color{red}[JDC: This protocol is missing crucial information, like exactly which cell type was used for expression!]}
+%{\color{red}[JDC: This protocol is missing crucial information, like exactly which cell type was used for expression!]}
 
 For each target, the selected construct sequence was subcloned from the selected DNA plasmid.
 Expression testing performed by QB3 MacroLab.
