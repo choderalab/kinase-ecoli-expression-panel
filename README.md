@@ -3,7 +3,7 @@
 ## Important links
 
 * [interactive table of kinase expression data and sequences](http://choderalab.github.io/kinome-data/kinase_constructs-addgene_hip_sgc.html)
-* [bioRxiv preprint]
+* [bioRxiv preprint](http://biorxiv.org/content/early/2016/02/03/038711)
 
 ## Description
 
