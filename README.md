@@ -2,13 +2,13 @@
 
 ## Important links
 
-* [interactive table of kinase expression data and sequences](http://choderalab.github.io/kinome-data/kinase_constructs-addgene_hip_sgc.html)
+* [interactive table of kinase expression data and constructs](http://choderalab.github.io/kinome-data/kinase_constructs-addgene_hip_sgc.html)
 * [bioRxiv preprint](http://biorxiv.org/content/early/2016/02/03/038711)
 
 ## Description
 
 This repository contains all code, sequences, and expression data.
-Most users probably want to simply [view the interactive table of plasmid sequences and results](http://choderalab.github.io/kinome-data/kinase_constructs-addgene_hip_sgc.html).
+Most users probably want to simply [view the interactive table of constructs](http://choderalab.github.io/kinome-data/kinase_constructs-addgene_hip_sgc.html).
 
 ## Manifest
 
