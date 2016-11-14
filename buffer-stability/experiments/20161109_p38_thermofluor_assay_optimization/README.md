@@ -1,5 +1,8 @@
 # p38 Thermofluor Assay to Optimizing Protein and Dye Concentration
 ### Start Date: 2016/11/10
+Experiment performed by:  
+- Mehtap Isik  
+- Steven Albanese  
 
 ## Lab Notebook
 [Google Drive link to lab notebook](https://drive.google.com/drive/folders/0BykO-ZGQb9DHMldOUTF1NEQzVXM?usp=sharing)
