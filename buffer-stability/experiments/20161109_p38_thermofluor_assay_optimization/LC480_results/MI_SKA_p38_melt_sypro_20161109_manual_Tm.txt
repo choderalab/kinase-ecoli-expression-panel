@@ -1,0 +1,52 @@
+Experiment: MI_SKA_p38_melt_sypro_20161109  Selected Filter: Sypro Orange (465-580)
+Include	Color	Pos	Name	Tm1	Tm2	Tm3	Status
+True	255	A1	Sample 1	46.81			* - Manually edited
+True	255	A2	Sample 2	46.17			* - Manually edited
+True	255	A3	Sample 3	44.76			* - Manually edited
+True	255	A4	Sample 4	44.57			* - Manually edited
+True	255	A5	Sample 5	43.88			* - Manually edited
+True	255	A6	Sample 6	43.88			* - Manually edited
+True	255	A7	Sample 7	43.46			* - Manually edited
+True	255	A8	Sample 8	43.33			* - Manually edited
+True	16744448	A9	Sample 9				
+True	16744448	A10	Sample 10				
+True	255	B1	Sample 25	46.53			* - Manually edited
+True	255	B2	Sample 26	46.74			* - Manually edited
+True	255	B3	Sample 27	44.95			* - Manually edited
+True	255	B4	Sample 28	44.95			* - Manually edited
+True	255	B5	Sample 29	44.07			* - Manually edited
+True	255	B6	Sample 30	43.88			* - Manually edited
+True	255	B7	Sample 31	43.12			* - Manually edited
+True	255	B8	Sample 32	43.90			* - Manually edited
+True	16744448	B9	Sample 33				
+True	16744448	B10	Sample 34				* - Manually edited
+True	255	C1	Sample 49	46.53			* - Manually edited
+True	255	C2	Sample 50	46.78			* - Manually edited
+True	255	C3	Sample 51	45.64			* - Manually edited
+True	255	C4	Sample 52	44.82			* - Manually edited
+True	255	C5	Sample 53	44.44			* - Manually edited
+True	255	C6	Sample 54	44.13			* - Manually edited
+True	255	C7	Sample 55	43.46			* - Manually edited
+True	255	C8	Sample 56	43.31			* - Manually edited
+True	255	C9	Sample 57	45.03			* - Manually edited
+True	255	C10	Sample 58	43.46			* - Manually edited
+True	255	D1	Sample 73	47.09			* - Manually edited
+True	255	D2	Sample 74	46.91			* - Manually edited
+True	255	D3	Sample 75	47.41			* - Manually edited
+True	255	D4	Sample 76	46.60			* - Manually edited
+True	255	D5	Sample 77	44.40			* - Manually edited
+True	255	D6	Sample 78	43.43			* - Manually edited
+True	255	D7	Sample 79	43.90			* - Manually edited
+True	255	D8	Sample 80	44.02			* - Manually edited
+True	255	D9	Sample 81	43.40			* - Manually edited
+True	255	D10	Sample 82	42.83			* - Manually edited
+True	16744448	E1	Sample 97				
+True	16744448	E2	Sample 98				
+True	16744448	E3	Sample 99				
+True	16744448	E4	Sample 100				
+True	16744448	E5	Sample 101				
+True	16744448	E6	Sample 102				
+True	16744448	E7	Sample 103				
+True	16744448	E8	Sample 104				
+True	16744448	E9	Sample 105				
+True	16744448	E10	Sample 106				
