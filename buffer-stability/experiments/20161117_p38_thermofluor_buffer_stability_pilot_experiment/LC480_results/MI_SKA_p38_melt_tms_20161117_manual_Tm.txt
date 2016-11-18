@@ -1,0 +1,20 @@
+Experiment: MI_SKA_p38_melt_sypro_20161117  Selected Filter: Sypro Orange (465-580)
+Include	Color	Pos	Name	Tm1	Status
+True	255	A1	Sample 1	40.41	* - Manually edited
+True	255	A2	Sample 2	39.96	* - Manually edited
+True	255	A3	Sample 3	39.90	* - Manually edited
+True	16744448	B1	Sample 25	37.66	* - Manually edited
+True	16744448	B2	Sample 26	38.84	* - Manually edited
+True	16744448	B3	Sample 27	35.53	* - Manually edited
+True	3200768	C1	Sample 49	41.64	* - Manually edited
+True	3200768	C2	Sample 50	38.28	* - Manually edited
+True	3200768	C3	Sample 51	38.33	* - Manually edited
+True	16744448	D1	Sample 73		
+True	16744448	D2	Sample 74		* - Manually edited
+True	16744448	D3	Sample 75		
+True	255	E1	Sample 97		* - Manually edited
+True	255	E2	Sample 98		* - Manually edited
+True	255	E3	Sample 99		
+True	3200768	F1	Sample 121		
+True	3200768	F2	Sample 122		
+True	3200768	F3	Sample 123		
