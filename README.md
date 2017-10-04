@@ -13,7 +13,7 @@ Most users probably want to simply [view the interactive table of constructs](ht
 ## Manifest
 
 * `constructs` - expression constructs and scripts for selecting them, for abl1 construct screen and 96-kinase expression panel
-* `expression_data` - excel files, caliper gels and report from MacroLab for all three expression tests 
+* `expression_data` - excel files, caliper gels and report from MacroLab for all three expression tests. Contains a combined spreadsheet summarizing three expression tests 
 * `kinome-database/` - XML database of kinase information used to build this library for the 96-kinase expression panel 
 * `plasmid_libraries/` - plasmid library data sources 
 * `manuscript/` - LaTeX manuscript, with figures and bibliography files. Downloaded from overleaf
