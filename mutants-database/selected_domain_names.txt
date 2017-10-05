@@ -1,0 +1,43 @@
+Regex: ^Protein kinase(?!; truncated)(?!; inactive)
+Number of domains matching regex: 69
+
+= Unique domain names which match regex =
+  Protein kinase 1   :   1
+  Protein kinase 2   :   1
+   Protein kinase    :  67
+
+= Unique domain names which do not match regex =
+           Death           
+  Phosphatase tensin-type  
+           L27 1           
+           L27 2           
+            FHA            
+           CRIB            
+            KA1            
+            SH2            
+            SH3            
+            SAM            
+            UVR            
+     Ig-like C2-type 6     
+          DRBM 2           
+          DRBM 1           
+           SARAH           
+   Guanylate kinase-like   
+            PDZ            
+           FERM            
+             J             
+          Eph LBD          
+           F-BAR           
+  Fibronectin type-III 1   
+  Fibronectin type-III 2   
+   AGC-kinase C-terminal   
+     Ig-like C2-type 5     
+     Ig-like C2-type 4     
+     Ig-like C2-type 7     
+            Roc            
+     Ig-like C2-type 1     
+     Ig-like C2-type 3     
+     Ig-like C2-type 2     
+      C2 tensin-type       
+            UBA            
+
