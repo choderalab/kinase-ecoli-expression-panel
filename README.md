@@ -1,17 +1,18 @@
 # An open library of human kinase domain constructs for automated bacterial expression
 
-This repository contains all code, sequences, and expression data for the Abl1 construct screen, the 96 kinase expression panel and the Abl1/Src mutant expression test.
+This repository contains all code, sequences, and expression data for our abl1 construct screen, 96 kinase expression panel, and Abl1/Src mutant expression test.
 
 ## Citation
 
 > An open library of human kinase domain constructs for automated bacterial expression
+>
 > Daniel L. Parton, Sonya M. Hanson, Lucelenie Rodríguez-Laureano, Steven K. Albanese, Scott Gradia, Chris Jeans, Nicholas M. Levinson, Markus A. Seeliger, John D. Chodera
-> DOI: 10.1101/038711
-> bioRxiv preprint: https://doi.org/10.1101/038711
+>
+> [DOI: 10.1101/038711](https://doi.org/10.1101/038711)
 
-## Interactive data browser
+## Interactive construct expression browser
 
-You can browse an [interactive table of kinase expression data and constructs](http://choderalab.github.io/kinome-data/kinase_constructs-addgene_hip_sgc.html).
+Browse an [interactive table of kinase expression data and constructs](http://choderalab.github.io/kinome-data/kinase_constructs-addgene_hip_sgc.html).
 
 ## Manifest
 
