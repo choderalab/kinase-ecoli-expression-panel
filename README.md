@@ -8,7 +8,7 @@ This repository contains all code, sequences, and expression data for our abl1 c
 
 > **An open library of human kinase domain constructs for automated bacterial expression**
 >
-> Daniel L. Parton, Sonya M. Hanson, Lucelenie Rodríguez-Laureano, Steven K. Albanese, Scott Gradia, Chris Jeans, Nicholas M. Levinson, Markus A. Seeliger, and John D. Chodera
+> Steven K. Albanese, Daniel L. Parton, Sonya M. Hanson, Lucelenie Rodríguez-Laureano, Mehtap Işik, Julie M. Behr, Scott Gradia, Chris Jeans, Nicholas M. Levinson, Markus A. Seeliger, and John D. Chodera
 >
 > bioRxiv preprint ahead of submission: [DOI:10.1101/038711](https://doi.org/10.1101/038711)
 
