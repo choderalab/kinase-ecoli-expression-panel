@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1003501.svg)](https://doi.org/10.5281/zenodo.1003501)
+
 # An open library of human kinase domain constructs for automated bacterial expression
 
 This repository contains all code, sequences, and expression data for our abl1 construct screen, 96 kinase expression panel, and Abl1/Src mutant expression test.
