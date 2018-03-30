@@ -1,0 +1,98 @@
+Experiment: MI_protein_melt_kinase_expression_panel_plate1_20180327  Selected Filter: Sypro Orange (465-580)
+Include	Color	Pos	Name	Tm1	Tm2	Status
+True	16744448	A1	Sample 1			
+True	16744448	A2	Sample 2			
+True	16744448	A3	Sample 3			
+True	16744448	A4	Sample 4			
+True	16744448	A5	Sample 5			
+True	16744448	A6	Sample 6			
+True	16744448	A7	Sample 7			
+True	16744448	A8	Sample 8			
+True	16744448	A9	Sample 9			
+True	16744448	A10	Sample 10			
+True	16744448	A11	Sample 11			
+True	16744448	A12	Sample 12			
+True	16744448	B1	Sample 25			
+True	16744448	B2	Sample 26			
+True	16744448	B3	Sample 27			
+True	255	B4	Sample 28	60.93		
+True	16744448	B5	Sample 29			
+True	255	B6	Sample 30	62.03		
+True	16744448	B7	Sample 31			
+True	16744448	B8	Sample 32			
+True	16744448	B9	Sample 33			
+True	16744448	B10	Sample 34			
+True	16744448	B11	Sample 35			
+True	3200768	B12	Sample 36	63.96	72.87	
+True	16744448	C1	Sample 49			
+True	16744448	C2	Sample 50			
+True	16744448	C3	Sample 51			
+True	16744448	C4	Sample 52			
+True	255	C5	Sample 53	36.74		
+True	16744448	C6	Sample 54			
+True	16744448	C7	Sample 55			
+True	16744448	C8	Sample 56			
+True	255	C9	Sample 57	64.27		
+True	255	C10	Sample 58	68.44		
+True	16744448	C11	Sample 59			
+True	16744448	C12	Sample 60			
+True	16744448	D1	Sample 73			
+True	16744448	D2	Sample 74			
+True	16744448	D3	Sample 75			
+True	16744448	D4	Sample 76			
+True	16744448	D5	Sample 77			
+True	16744448	D6	Sample 78			
+True	16744448	D7	Sample 79			
+True	16744448	D8	Sample 80			
+True	16744448	D9	Sample 81			
+True	16744448	D10	Sample 82			
+True	16744448	D11	Sample 83			
+True	16744448	D12	Sample 84			
+True	16744448	E1	Sample 97			
+True	16744448	E2	Sample 98			
+True	16744448	E3	Sample 99			
+True	16744448	E4	Sample 100			
+True	16744448	E5	Sample 101			
+True	16744448	E6	Sample 102			
+True	16744448	E7	Sample 103			
+True	16744448	E8	Sample 104			
+True	16744448	E9	Sample 105			
+True	255	E10	Sample 106	66.32		
+True	16744448	E11	Sample 107			
+True	16744448	E12	Sample 108			
+True	255	F1	Sample 121	64.00		
+True	16744448	F2	Sample 122			
+True	16744448	F3	Sample 123			
+True	255	F4	Sample 124	63.27		
+True	16744448	F5	Sample 125			
+True	16744448	F6	Sample 126			
+True	16744448	F7	Sample 127			
+True	16744448	F8	Sample 128			
+True	16744448	F9	Sample 129			
+True	16744448	F10	Sample 130			
+True	16744448	F11	Sample 131			
+True	255	F12	Sample 132	41.49		
+True	16744448	G1	Sample 145			
+True	16744448	G2	Sample 146			
+True	16744448	G3	Sample 147			
+True	255	G4	Sample 148	59.25		
+True	16744448	G5	Sample 149			
+True	16744448	G6	Sample 150			
+True	255	G7	Sample 151	65.34		
+True	16744448	G8	Sample 152			
+True	16744448	G9	Sample 153			
+True	255	G10	Sample 154	68.03		
+True	255	G11	Sample 155	62.80		
+True	16744448	G12	Sample 156			
+True	255	H1	Sample 169	58.19		
+True	16744448	H2	Sample 170			
+True	16744448	H3	Sample 171			
+True	16744448	H4	Sample 172			
+True	16744448	H5	Sample 173			
+True	16744448	H6	Sample 174			
+True	16744448	H7	Sample 175			
+True	16744448	H8	Sample 176			
+True	16744448	H9	Sample 177			
+True	255	H10	Sample 178	61.51		
+True	16744448	H11	Sample 179			
+True	255	H12	Sample 180	64.86		
