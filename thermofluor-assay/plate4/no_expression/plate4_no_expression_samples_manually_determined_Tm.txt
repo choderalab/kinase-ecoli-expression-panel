@@ -1,7 +1,0 @@
-Experiment: MI_protein_melt_kinase_expression_panel_plate4_20180327  Selected Filter: Sypro Orange (465-580)
-Include	Color	Pos	Name	Tm1	Tm2	Status
-True	255	C9	Sample 57	49.64		* - Manually edited
-True	255	D2	Sample 74	49.64		* - Manually edited
-True	255	D6	Sample 78	48.44		* - Manually edited
-True	255	E4	Sample 100	49.57		* - Manually edited
-True	255	E7	Sample 103	49.94		* - Manually edited
